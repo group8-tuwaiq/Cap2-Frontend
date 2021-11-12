@@ -60,15 +60,15 @@ const Books = () => {
               require the caller and recipient to both be free at the same
               moment; this permits communication even between busy.
             </Col>
-            <Col style={({ margin: "13px" }, { padding: "13px" })}>>
-              {" "}
+            <Col style={({ margin: "13px" }, { padding: "13px" })}>
+            {" "}
               <Image
                 src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg"
                 width="180px"
                 height="100%"
-                alt="no image"
-                rounded
-              />
+                alt="no image" 
+                rounded 
+              /> 
             </Col>
           </Row>
           <Row>

@@ -44,6 +44,11 @@ const Nav = () => {
                     Audio
                   </Link>
                 </li>
+                <li class="nav-item" role="presentation">
+                  <Link class="nav-link" to="favorite">
+                  favorite
+                  </Link>
+                </li>
               </ul>
               <form class="form-inline mr-auto" target="_self">
                 <div class="form-group">
