@@ -10,7 +10,7 @@ const Films = () => {
     <div className="App">
       <header className="App-header"> 
       <CardGroup>
-  <Card  style={{color:"red"}, {margin:"13px"}}> 
+  <Card  style={{color:"red"} , {margin:"13px"}}> 
     <Card.Img variant="top" src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg" height="350" width="250" alt="no image" />
     <Card.Body>
       <Card.Title>Movies Name</Card.Title>
