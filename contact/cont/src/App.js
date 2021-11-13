@@ -12,9 +12,11 @@ function App() {
     <div className="App">
       <header className="App-header">
       
-
+<h1>Team Members </h1>
 
 <CardGroup  >
+
+
 
       <Card  style={{color:"red"},{margin: "30px"} }>
       <Card.Img variant="top" src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg" height="400" width="160" alt="no image" />
