@@ -1,0 +1,23 @@
+.h2 h2 {
+    font-size: 30px;
+    text-align: center;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+    padding:5px;
+  }
+  .h2 h2:hover {
+    transform: scale(1.1);
+  }
+  .h2{
+      display: flex;
+      justify-content: center;
+  }
+  p {
+    text-align: center;
+  }
+  @media ( max-width: 600px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
