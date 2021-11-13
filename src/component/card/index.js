@@ -4,10 +4,10 @@ const Card = () => {
 
     return (
     <div className="cards">
-             <div>
+             {/* <div>
               <li>{cardd.name}</li>
               <img src={cardd.images.large} alt="Pokemon Cards is here .."/>
-            </div>
+            </div> */}
     </div>
   )
 }

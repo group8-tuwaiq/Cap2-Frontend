@@ -6,39 +6,42 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import "./style.css";
 
 const Home = () => {
   return (
     <div>
-      <Image
-        src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg"
-        height="80%"
-        width="90%"
-        alt="no image"
-      />
-      <h2>
-        {" "}
-        welcome to Home page ! 
+   <div className ="movie">
+   <div class="container hero">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h1 class="text-center">The Truth is out there.</h1>
+                    </div>
+            </div>
+        </div>
+     
+      </div>
+      <Container>
+      <div className="par">
+        <h2> welcome to Home page !</h2>
         <br></br>
-        Text messages are used for personal, family,
-        business and social purposes. Governmental and non-governmental
-        organizations use text messaging for communication between colleagues.
-        In the 2010s, the sending of short informal messages became an accepted
-        part of many cultures, as happened earlier with emailing.[1] This makes
-        texting a quick and easy way to communicate with friends, family and
-        colleagues, including in contexts where a call would be impolite or
-        inappropriate (e.g., calling very late at night or when one knows the
-        other person is busy with family or work activities). Like e-mail and
-        voicemail and unlike calls (in which the caller hopes to speak directly
-        with the recipient), texting does not require the caller and recipient
-        to both be free at the same moment; this permits communication even
-        between busy
-      </h2>
+        <p>
+          Text messages are used for personal, family, business and social
+          purposes. Governmental and non-governmental organizations use text
+          messaging for communication between colleagues. In the 2010s, the
+          sending of short informal messages became an accepted part of many
+        </p>
+        <br></br>
+      </div>
 
+      <br></br>
+      <br></br>
+      <h2> Top Relted Movies ... ! </h2>
+      <br></br>
       <div className="App">
         <header className="App-header">
           <CardGroup>
-            <Card style={({ color: "red" }, { margin: "13px" })}>
+            <Card style={({ color: "black" }, { margin: "13px" })}>
               <Card.Img
                 variant="top"
                 src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg"
@@ -47,9 +50,13 @@ const Home = () => {
                 alt="no image"
               />
               <Card.Body>
-                <Card.Title>Movies Name</Card.Title>
-                <Card.Text>Movies Description</Card.Text>
-                <Button variant="danger">More</Button>
+                <Card.Title style={{ color: "black" }}>Movies Name</Card.Title>
+                <Card.Text style={{ color: "black" }}>
+                  Movies Description
+                </Card.Text>
+                <Button style={{ margin: "13px" }} variant="danger">
+                  More
+                </Button>
                 <Button variant="light">
                   {" "}
                   <svg
@@ -67,22 +74,31 @@ const Home = () => {
                   </svg>{" "}
                 </Button>
               </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Download 3 month ago</small>
+              <Card.Footer
+                style={({ background: "#ce6363" }, { color: "black" })}
+              >
+                <small className="text-muted">Watch Now</small>
               </Card.Footer>
             </Card>
-            <Card style={{ color: "red" }}>
+            <Card style={{ margin: "13px" }}>
               <Card.Img
-                variant="top"
                 src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg"
                 height="350"
                 width="250"
                 alt="no image"
+                variant="top"
               />
+
               <Card.Body>
-                <Card.Title>Movies Name</Card.Title>
-                <Card.Text>Movies Description</Card.Text>
-                <Button variant="danger">More</Button>
+                <Card.Title style={{ color: "black" }}>
+                  Tomorrowland{" "}
+                </Card.Title>
+                <Card.Text style={{ color: "black" }}>
+                  Movies Description
+                </Card.Text>
+                <Button style={{ margin: "13px" }} variant="danger">
+                  More
+                </Button>
                 <Button variant="light">
                   {" "}
                   <svg
@@ -101,10 +117,10 @@ const Home = () => {
                 </Button>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">Download 3 month ago</small>
+                <small className="text-muted">Watch Movie Now</small>
               </Card.Footer>
             </Card>
-            <Card style={{ color: "red" }}>
+            <Card style={({ color: "black" }, { margin: "13px" })}>
               <Card.Img
                 variant="top"
                 src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg"
@@ -113,8 +129,47 @@ const Home = () => {
                 alt="no image"
               />
               <Card.Body>
-                <Card.Title>Movies Name</Card.Title>
-                <Card.Text>Movies Description</Card.Text>
+                <Card.Title style={{ color: "black" }}> Movies Name</Card.Title>
+                <Card.Text style={{ color: "black" }}>
+                  Movies Description
+                </Card.Text>
+                <Button style={{ margin: "13px" }} variant="danger">
+                  More
+                </Button>
+                <Button variant="light">
+                  {" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="red"
+                    class="bi bi-heart-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                    />
+                  </svg>{" "}
+                </Button>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Watch Movie Now</small>
+              </Card.Footer>
+            </Card>
+            <Card style={({ color: "black" }, { margin: "13px" })}>
+              <Card.Img
+                variant="top"
+                src="https://i.imgflip.com/1yj1os.gif"
+                height="350"
+                width="250"
+                alt="no image"
+              />
+              <Card.Body>
+                <Card.Title style={{ color: "red" }}>Movies Name</Card.Title>
+                <Card.Text style={{ color: "red" }}>
+                  Movies Description
+                </Card.Text>
                 <Button variant="danger">More</Button>
                 <Button variant="light">
                   {" "}
@@ -134,14 +189,19 @@ const Home = () => {
                 </Button>
               </Card.Body>
               <Card.Footer>
-                <small className="text-muted">Download 3 month ago</small>
+                <small className="text-muted">Watch Movie Now</small>
               </Card.Footer>
             </Card>
           </CardGroup>
         </header>
       </div>
 
+      <br></br>
+      <br></br>
+      </Container>
       <h2> Top Relted Books !</h2>
+      <br></br>
+      <br></br>
       <Container>
         <Row>
           <Col style={{ margin: "20px" }}>
@@ -155,6 +215,7 @@ const Home = () => {
             />
           </Col>
           <Col>
+          <p>
             messages are used for personal, family, business and social
             purposes. Governmental and non-governmental organizations use text
             messaging for communication between colleagues. In the 2010s, the
@@ -168,11 +229,17 @@ const Home = () => {
             speak directly with the recipient), texting does not require the
             caller and recipient to both be free at the same moment; this
             permits communication even between busy.
+            </p>
           </Col>
         </Row>
       </Container>
 
+      <br></br>
+      <br></br>
+
       <h2> Top Relted Audio !</h2>
+      <br></br>
+      <br></br>
       <Container>
         <Row>
           <Col style={{ margin: "20px" }}>
@@ -247,6 +314,8 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      <br></br>
+      <br></br> 
     </div>
   );
 };
