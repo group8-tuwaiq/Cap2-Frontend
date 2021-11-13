@@ -11,7 +11,7 @@ const Footer = () => {
             <div class="col-sm-6 col-md-3 item">
               <ul>
                 <li>
-                  <Link to ="books">Books</Link>
+                  <Link to="books">Books</Link>
                 </li>
                 <li>
                   <Link to="audio">Audio</Link>
@@ -19,18 +19,8 @@ const Footer = () => {
                 <li>
                   <Link to="Films">Movies </Link>
                 </li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-md-3 item">
-              <ul>
                 <li>
-                  <a href="#"> Team </a>
-                </li>
-                <li>
-                  <a href="#">About us</a>
-                </li>
-                <li>
-                  <a href="#">Contact us</a>
+                  <a href="team"> Team </a>
                 </li>
               </ul>
             </div>
@@ -59,8 +49,8 @@ const Footer = () => {
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                //   width="16"
-                //   height="16"
+                  //   width="16"
+                  //   height="16"
                   fill="currentColor"
                   class="bi bi-twitter"
                   viewBox="0 0 16 16"
@@ -71,8 +61,8 @@ const Footer = () => {
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                //   width="16"
-                //   height="16"
+                  //   width="16"
+                  //   height="16"
                   fill="currentColor"
                   class="bi bi-snapchat"
                   viewBox="0 0 16 16"
@@ -83,8 +73,8 @@ const Footer = () => {
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                //   width="16"
-                //   height="16"
+                  //   width="16"
+                  //   height="16"
                   fill="currentColor"
                   class="bi bi-instagram"
                   viewBox="0 0 16 16"

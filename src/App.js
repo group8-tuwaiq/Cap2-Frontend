@@ -10,6 +10,7 @@ import Card from "./component/card";
 import Nav from "./component/nav";
 import Audio from "./component/audio";
 import Footer from "./component/footer"; 
+import Team from "./component/team";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route exact path="/Films" element={<Films />} />
         <Route exact path="/Card/:id" element={<Card />} /> 
         <Route exact path="/audio/" element={<Audio />} />
+        <Route exact path="/team/" element={<Team />} />
         <Route
           path="*"
           render={() => { 
