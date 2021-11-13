@@ -9,7 +9,9 @@ const Books = () => {
   return (
     <div>
       <header>
-        <h2>  Books </h2>
+        <br></br>
+        <br></br>
+        <h2> Books </h2>
         <br></br>
         <br></br>
 
@@ -61,14 +63,14 @@ const Books = () => {
               moment; this permits communication even between busy.
             </Col>
             <Col style={({ margin: "13px" }, { padding: "13px" })}>
-            {" "}
+              {" "}
               <Image
                 src="https://www.planetbroadcasting.com/wp-content/uploads/2020/05/Annotation-2020-05-04-081104-1.jpg"
                 width="180px"
                 height="100%"
-                alt="no image" 
-                rounded 
-              /> 
+                alt="no image"
+                rounded
+              />
             </Col>
           </Row>
           <Row>
@@ -83,7 +85,6 @@ const Books = () => {
               />
             </Col>
             <Col style={({ margin: "13px" }, { padding: "13px" })}>
-
               messages are used for personal, family, business and social
               purposes. Governmental and non-governmental organizations use text
               messaging for communication between colleagues. In the 2010s, the
@@ -101,6 +102,8 @@ const Books = () => {
           </Row>
         </Container>
       </header>
+      <br></br>
+      <br></br>
     </div>
   );
 };

@@ -1,12 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const favorite = () => {
+  return (
+    <div>
+      <br></br>
+      <br></br>
+      <h2> here 
+          is 
+          Favorite .. 
+          page ...... 
 
-    return(
-        <div> 
-     <h2>favorite Page ..! </h2> 
-        </div>
-    )
-}
+      </h2>
+      <br></br>
+      <br></br>
+    </div>
+  );
+};
 
 export default favorite;
