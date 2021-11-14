@@ -14,7 +14,7 @@ const Register = () => {
   const reg = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/register", {
+      .post("https://sweetspot-8-back.herokuapp.com/register", {
         name: usernameReg,
         email: emailReg,
         password: passwordReg,
