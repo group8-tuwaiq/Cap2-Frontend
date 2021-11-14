@@ -23,7 +23,7 @@ const Audio = () => {
   }, []);
 
   const specificCard = (n) => {
-    navigate(`/card/${n}`, { state: api });
+    navigate(`/audiocard/${n}`, { state: api });
   };
 
   const getSearched = async (e) => {

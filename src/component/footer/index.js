@@ -4,12 +4,12 @@ import "./style.css";
 
 const Footer = () => {
   return (
-    <div className="footer-dark">
+    <div className="footer-dark p-0">
       <footer>
-        <div className="container">
+        <div className="container pt-4">
           <div className="row">
             <div className="col-sm-6 col-md-3 item">
-              <ul>
+              <ul  style={{fontSize:'1.5rem'}}>
                 <li>
                   <Link to="books">Books</Link>
                 </li>
@@ -28,7 +28,7 @@ const Footer = () => {
               <ul></ul>
             </div>
             <div className="col-md-6 item text">
-              <h3>Sweet Spots</h3>
+              <h3 style={{textAlign:'center'}}>Sweet Spot</h3>
               <p>
                 Praesent sed lobortis mi. Suspendisse vel placerat ligula.
                 Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis
@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <p className="copyright">Company Name © 2021</p>
+          <p className="copyright pb-2">Sweet Spot © 2021</p>
         </div>
       </footer>
     </div>

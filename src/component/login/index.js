@@ -21,7 +21,7 @@ const Login = () => {
         console.log(response);
         if (response.data.status == true) {
           console.log("its true");
-          navigate("/home", { state: response.data.usrName });
+          navigate("/", { state: { userName: response.data.name } });
         }
 
         if (response.data.status == false) {
@@ -33,37 +33,49 @@ const Login = () => {
   };
   const goReg = () => {
     navigate("/register");
-  }
+  };
   return (
     <Container>
       <h1 className="text-center p-5 bg-dark text-white">Login</h1>
       <form action="/login" method="POST">
         <Form.Group className="m-5" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" name="email" onChange={(e) => {
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            onChange={(e) => {
               setemail(e.target.value);
-            }} />
+            }}
+          />
         </Form.Group>
 
         <Form.Group className="mt-5 mx-5" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" name="password" onChange={(e) => {
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            name="password"
+            onChange={(e) => {
               setpassword(e.target.value);
-            }}/>
+            }}
+          />
         </Form.Group>
         <Form.Group className="mx-5 mt-2" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Remeber me" />
         </Form.Group>
         <p>{logResponse}</p>
 
-        <Button
-          className="btn btn-dark m-5 px-4 py-2"
-          onClick={login}
-        >
+        <Button className="btn btn-dark m-5 px-4 py-2" onClick={login}>
           Login
         </Button>
-        <Button type="button" className="m-0 px-4 py-2" variant="outline-dark" onClick={goReg}>
-        Register
+        <Button
+          type="button"
+          className="m-0 px-4 py-2"
+          variant="outline-dark"
+          onClick={goReg}
+        >
+          Register
         </Button>
       </form>
     </Container>

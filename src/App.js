@@ -10,6 +10,8 @@ import Audio from "./component/audio";
 import Favorite from "./component/favourite";
 import Footer from "./component/footer";
 import Team from "./component/team";
+import VideoCard from "./component/videoCard";
+import AudioCard from "./component/audioCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -27,6 +29,8 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/favourite" element={<Favorite />} />
         <Route exact path="/team/" element={<Team />} />
+        <Route exact path="/videocard/:id" element={<VideoCard />} />
+        <Route exact path="/audiocard/:id" element={<AudioCard />} />
         <Route
           path="*"
           render={() => {

@@ -5,20 +5,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Nav = () => {
   const location = useLocation();
-  let welcome = "";
+  let welcome =''
   let hide = false;
-  if (location.state) {
-    console.log("There is a user");
-    welcome = "Welcome " + location.state;
-    hide = true;
-  }
+    if(location.state&&location.state.userName!=undefined){
+      console.log("There is a user");
+      welcome = "Welcome " + location.state.userName
+      hide = true;
+    }
   return (
     <div>
       <div className="header-dark">
         <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
-          <div className="container">
+          <div className="container d-flex">
             <Link className="navbar-brand" to="/">
-            Sweet Spots
+            Sweet Spot
             </Link>
             <button
               className="navbar-toggler"
@@ -32,7 +32,7 @@ const Nav = () => {
               className="collapse navbar-collapse d-flex justify-content-between"
               id="navcol-1"
             >
-              <ul className="nav navbar-nav mx-5">
+              <ul className="nav navbar-nav mx-5" style={{fontSize:'1.1vw'}}>
                 <li className="nav-item " role="presentation">
                   <Link className="nav-link" to="/">
                     Home
@@ -76,10 +76,11 @@ const Nav = () => {
                 ) : (
                   ""
                 )}
-                {hide ? (
-                  <Link className="btn btn-light action-button" to="home">
-                    Log out
+                {hide ? ( 
+                  <Link  className="btn btn-light action-button" to="/">
+                    Log out 
                   </Link>
+                  
                 ) : (
                   ""
                 )}
@@ -87,10 +88,7 @@ const Nav = () => {
             </div>
           </div>
         </nav>
-        <div className="container hero">
-          <div className="row"></div>
-        </div>
-        <br></br>
+
         <br></br>
       </div>
     </div>

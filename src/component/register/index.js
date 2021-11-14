@@ -24,7 +24,7 @@ const Register = () => {
         if (response.data.status == true) {
           //   setcurrentUser(response.data.name);
           console.log("registered");
-          navigate("/home", { state: response.data.name }); //lets assume home is homepage and pass currentUser
+          navigate("/", { state: {userName:response.data.name} }); //lets assume home is homepage and pass currentUser
         }
 
         if (response.data.status == false) {

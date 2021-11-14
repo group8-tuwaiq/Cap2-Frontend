@@ -14,11 +14,15 @@ const Home = () => {
   const [Movies, setMovies] = useState([]);
   const [Audio, setaudio] = useState([]);
   const getMyAPI = async () => {
-    const response = await axios.get("https://sweetspot-8-back.herokuapp.com/search/great");
+    const response = await axios.get(
+      "https://sweetspot-8-back.herokuapp.com/search/great"
+    );
     setMovies(response.data.results);
   };
   const getMyaudio = async () => {
-    const response = await axios.get("https://sweetspot-8-back.herokuapp.com/search/audio");
+    const response = await axios.get(
+      "https://sweetspot-8-back.herokuapp.com/search/listen"
+    );
     setaudio(response.data.results);
   };
 
@@ -35,7 +39,7 @@ const Home = () => {
     <div>
       <Container>
         <div className="slid">
-          <Carousel>
+          <Carousel controls={false}>
             <Carousel.Item>
               <img
                 src="http://www.simbasible.com/wp-content/uploads/2020/04/1-4.gif"
@@ -91,30 +95,33 @@ const Home = () => {
         </div>
         <br></br>
         <br></br>
-        <div className="h2">
-          <h2 style={{ width: "60%" }}>Welcome to Sweet Spots</h2>
+        <div className="wel py-4 bg-dark">
+          <div className="h2">
+            <h2 style={{ width: "60%", backgroundColor: "white" }}>
+              Welcome to Sweet Spots
+            </h2>
+          </div>
+          <br></br>
+          <p style={{ width: "60%", marginLeft: "20%", color:"white" }}>
+            Movies move us like nothing else can, whether they’re scary, funny,
+            dramatic, romantic or anywhere in-between. So many titles, so much
+            to experience. From Netflix to Amazon Prime, and HBO Max to the
+            Criterion Channel, here are the best movies coming to each streaming
+            platform this month. Warner Bros’ whole “let’s release every single
+            one of our 2021 Just in time for the release of Sean Baker’s
+            incredible “Red Rocket,” Magnolia Selects is celebrating the movie
+            that elevated him towards the highest echelons of American indie
+            cinema and kick-started.
+          </p>
         </div>
         <br></br>
-        <p style={{ width: "60%", marginLeft: "20%" }}>
-          Movies move us like nothing else can, whether they’re scary, funny,
-          dramatic, romantic or anywhere in-between. So many titles, so much to
-          experience. From Netflix to Amazon Prime, and HBO Max to the Criterion
-          Channel, here are the best movies coming to each streaming platform
-          this month. Warner Bros’ whole “let’s release every single one of our
-          2021 Just in time for the release of Sean Baker’s incredible “Red
-          Rocket,” Magnolia Selects is celebrating the movie that elevated him
-          towards the highest echelons of American indie cinema and
-          kick-started.
-        </p>
-        <br></br>
-
         <br></br>
         <br></br>
         <div className="h2">
           <h2>Top Reted Movies</h2>
         </div>
         <br></br>
-        <div className="App">
+        <div className="App d-flex justify-content-center">
           <header className="App-header">
             <CardGroup>
               {Movies.map((elem, index) => {
@@ -169,67 +176,57 @@ const Home = () => {
 
         <br></br>
         <br></br>
-        <div className="h2">
-          <h2>Top Reted Books</h2>
+        <div className="wel bg-dark text-white">
+          <div className="h2 pt-4 text-black">
+            <h2 className="bg-white">Top Reted Books</h2>
+          </div>
+          <br></br>
+          <Row>
+            <Col style={{ margin: "0 0 20px 90px", float:'right'}} className="d-flex justify-content-left">
+              <Image
+                src="https://is1-ssl.mzstatic.com/image/thumb/Publication2/v4/db/fa/f8/dbfaf8df-3a6c-a99a-7169-7c912b775cf0/9781612680187-frontcover.jpg/100x100bb.jpg"
+                width="70%"
+                alt="no haha"
+                rounded
+              />
+            </Col>
+            <Col>
+              <p style={{textAlign:'left', width:"97%"}} className="">
+                It's been nearly 25 years since Robert Kiyosaki’s Rich Dad Poor
+                Dad first made waves in the Personal Finance arena. It has since
+                become the #1 Personal Finance book of all time... translated
+                into dozens of languages and sold around the world. Rich Dad
+                Poor Dad is Robert's story of growing up with two dads — his
+                real father and the father of his best friend, his rich dad —
+                and the ways in which both men shaped his thoughts about money
+                and investing. The book explodes the myth that you need to earn
+                a high income to be rich and explains the difference between
+                working for money and having your money work for you. 20
+                Years... 20/20 Hindsight In the 20th Anniversary Edition of this
+                classic, Robert offers an update on what we’ve seen over the
+                past 20 years related to money, investing, and the global
+                economy. Sidebars throughout the book will take readers “fast
+                forward” — from 1997 to today — as Robert assesses how the
+                principles taught by his rich dad have stood the test of time.
+                In many ways, the messages of Rich Dad Poor Dad, messages that
+                were criticized and challenged two decades ago, are more
+                meaningful, relevant and important today than they were 20 years
+                ago. As always, readers can expect that Robert will be candid,
+                insightful. and continue to rock more than a few boats in his
+                retrospective.
+              </p>
+            </Col>
+          </Row>
         </div>
         <br></br>
-        <br></br>
-        <Row>
-          <Col style={{ margin: "20px" }}>
-            <Image
-              src="https://is1-ssl.mzstatic.com/image/thumb/Publication2/v4/db/fa/f8/dbfaf8df-3a6c-a99a-7169-7c912b775cf0/9781612680187-frontcover.jpg/100x100bb.jpg"
-              width="70%"
-              alt="no haha"
-              rounded
-            />
-          </Col>
-          <Col>
-            <p>
-              It's been nearly 25 years since Robert Kiyosaki’s Rich Dad Poor
-              Dad first made waves in the Personal Finance arena. It has since
-              become the #1 Personal Finance book of all time... translated into
-              dozens of languages and sold around the world. Rich Dad Poor Dad
-              is Robert's story of growing up with two dads — his real father
-              and the father of his best friend, his rich dad — and the ways in
-              which both men shaped his thoughts about money and investing. The
-              book explodes the myth that you need to earn a high income to be
-              rich and explains the difference between working for money and
-              having your money work for you. 20 Years... 20/20 Hindsight In the
-              20th Anniversary Edition of this classic, Robert offers an update
-              on what we’ve seen over the past 20 years related to money,
-              investing, and the global economy. Sidebars throughout the book
-              will take readers “fast forward” — from 1997 to today — as Robert
-              assesses how the principles taught by his rich dad have stood the
-              test of time. In many ways, the messages of Rich Dad Poor Dad,
-              messages that were criticized and challenged two decades ago, are
-              more meaningful, relevant and important today than they were 20
-              years ago. As always, readers can expect that Robert will be
-              candid, insightful. and continue to rock more than a few boats in
-              his retrospective. Will there be a few surprises? Count on it.
-              Rich Dad Poor Dad. Explodes the myth that you need to earn a high
-              income to become rich Challenges the belief that your house is an
-              asset Shows parents why they can't rely on the school system to
-              teach their kids about money Defines once and for all an asset and
-              a liability Teaches you what to teach your kids about money for
-              their fuure financial success Rich Dad Poor Dad has sold over 32
-              million copies[2] in more than 51 languages across more than 109
-              countries, been on the New York Times bestsellers list for over
-              six years, launched a series of books and related products; and
-              received positive reviews from some critics.
-            </p>
-          </Col>
-        </Row>
-
         <br></br>
         <br></br>
         <div className="h2">
           <h2>Top Reted Audio </h2>
         </div>
-        <br></br>
-        <br></br>
-        <Row>
+<div className="d-flex justify-content-center">
+        <Row >
           <Col style={{ margin: "20px" }}>
-            {" "}
             <CardGroup className="mx-5">
               {Audio.map((elem, index) => {
                 return (
@@ -280,6 +277,7 @@ const Home = () => {
             </CardGroup>
           </Col>
         </Row>
+        </div>
       </Container>
       <br></br>
       <br></br>

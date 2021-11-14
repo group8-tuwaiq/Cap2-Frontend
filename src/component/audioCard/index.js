@@ -6,12 +6,12 @@ import { Button, Card, Container } from "react-bootstrap";
 import CardGroup from "react-bootstrap/CardGroup";
 import Col from "react-bootstrap/Col";
 
-const OneCard = () => {
+const AudioCard = () => {
   const location = useLocation();
 
   const [Movies, setMovies] = useState([]);
   const [check, setCheck] = useState("");
-  const [myTerm, setmyTerm] = useState("action")
+  const [myTerm, setmyTerm] = useState("action");
 
   let myItem = {};
   const { id } = useParams();
@@ -35,7 +35,7 @@ const OneCard = () => {
     getMyAPI();
   }, []);
   const [btn, setBtn] = useState("Remove from favourite");
-  const addOrRemove = async(id) => {
+  const addOrRemove = async (id) => {
     if (btn == "Remove from favourite") {
       setBtn("Add to favourite");
     } else {
@@ -44,7 +44,7 @@ const OneCard = () => {
     const addToFavourite = await axios.post(
       `https://sweetspot-8-back.herokuapp.com/favourite/${id}/movie/${myTerm}`
     );
-    console.log("add response ",addToFavourite.data);
+    console.log("add response ", addToFavourite.data);
   };
   return (
     <div className="cards">
@@ -52,21 +52,30 @@ const OneCard = () => {
         <CardGroup>
           <Col>
             <Card style={{ margin: "30px auto", width: "70%" }}>
-              <Card.Img
-                variant="top"
-                src={Movies.artworkUrl100}
-                height="550px"
-                width="250px"
-                alt="no image"
-                className="p-4"
-                style={{borderRadius:'35px'}}
-              />
-              <Card.Body className="" style={{width:'80%',margin:'0 auto'}}>
-                <Card.Title className="pb-3" style={{fontSize:'1.4vw'}}>{Movies.trackName}</Card.Title>
-                <Card.Text style={{fontSize:'1.1vw'}} className="pb-3">{Movies.longDescription}</Card.Text>
+              <div class="embed-responsive embed-responsive-16by9">
+                <audio
+                  src={Movies.previewUrl}
+                  style={{ margin: "5rem" }}
+                  type="audio/x-m4a"
+                  controls
+                  autoplay
+                ></audio>
+              </div>
+              <Card.Body
+                className=""
+                style={{ width: "80%", margin: "0 auto" }}
+              >
+                <Card.Title className="pb-3" style={{ fontSize: "1.4vw" }}>
+                  {Movies.trackName}
+                </Card.Title>
+                <Card.Text style={{ fontSize: "1.1vw" }} className="pb-3">
+                  {Movies.longDescription}
+                </Card.Text>
               </Card.Body>
               <Card.Footer className="d-flex justify-content-between align-items-center">
-                <small className="text-muted" style={{margin:'0 auto'}}>Released {Movies.releaseDate}</small>
+                <small className="text-muted" style={{ margin: "0 auto" }}>
+                  Released {Movies.releaseDate}
+                </small>
                 <Button
                   variant="danger"
                   className={check}
@@ -85,4 +94,4 @@ const OneCard = () => {
   );
 };
 
-export default OneCard;
+export default AudioCard;
